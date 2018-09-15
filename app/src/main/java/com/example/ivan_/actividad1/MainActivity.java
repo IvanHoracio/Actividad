@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         char primerLetraAP = Apellido_paterno.getText().charAt(0);
 
         char[] vocales = {'A','E','I','O','U', 'a','e','i','o','u'};
-        String cadAux = "";
+        String cadAux = "Pedro Perez";
         Character LetraAP = new Character(cadAux.charAt())
         //Tomar la primer letra del apellido materno;
 
