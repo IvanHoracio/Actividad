@@ -4,15 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Nombre"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:id="@+id/Ape_pa"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:text="Apellido paterno"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <TextView
+        android:id="@+id/AP_ma"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+        android:text="Apellido Materno"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <TextView
+        android:id="@+id/Fe_nac"
+        android:layout_width="185dp"
+        android:layout_height="23dp"
+        android:text="Fecha de nacimiento"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <TextView
+        android:id="@+id/Homo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homonimia"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:id="@+id/Rfc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RFC"
+        android:textAllCaps="false"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:contentDescription="Nombre"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <EditText
+        android:id="@+id/Apellido_pa"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:contentDescription="Ap_paterno"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <EditText
+        android:id="@+id/Ap_ma"
+        android:layout_width="196dp"
+        android:layout_height="41dp"
+        android:contentDescription="Ap_materno"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <EditText
+        android:id="@+id/Fe_Nac"
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:contentDescription="F_nacimientos"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <EditText
+        android:id="@+id/Homo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Homonimia"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <EditText
+        android:id="@+id/RFCtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="rfc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="?attr/colorControlActivated"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <Button
+        android:id="@+id/Generar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generarRFC"
+        android:text="Generar RFC"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <Button
+        android:id="@+id/Limpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpiar campos"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="404dp" />
 
 </android.support.constraint.ConstraintLayout>
