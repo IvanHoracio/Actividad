@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,16 +12,40 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+    }
+
+    public String AdecuarCadena(String Cadena){
+        String cadAux = Cadena.toUpperCase().trim();
+        //Sustituir letras acentuadas
+        char [] vocalesAcentuadas = {'Á', 'É' , 'Í' ,'Ó', 'Ú'};
+        char[] vocales = {'A','E','I','O','U', 'a','e','i','o','u'};
+        for (byte pos = 0; pos < vocalesAcentuadas.length; pos++)
+            cadAux.replace(vocalesAcentuadas[pos], vocales[pos]);
+            return  cadAux;
+
     }
 
     public void GenerarRFC(View v){
-        //Tomar la primer letra y primer vocal del apellido paterno
+        //Tomar la primer letra
         EditText Apellido_paterno = (EditText) findViewById(R.id.Apellido_pa);
-        char primerLetraAP = Apellido_paterno.getText().charAt(0);
+        String apPaterno = AdecuarCadena(Apellido_paterno.getText().toString());
 
-        char[] vocales = {'A','E','I','O','U', 'a','e','i','o','u'};
-        String cadAux = "Pedro Perez";
-        Character LetraAP = new Character(cadAux.charAt())
+        Toast.makeText(this, "Cadena convertida" + apPaterno,Toast.LENGTH_LONG);
+        char primerLetraAP = apPaterno.charAt(0);
+        //Sustituir letras acentuadas
+        char[] vocales = {'A','E','I','O','U'};
+
+        byte pos = 0;
+        boolean encontrada = false;
+
+        for (pos = 0 ; pos < vocales.length; pos++){
+            if(apPaterno.indexOf(vocales[pos])>=0){
+                break;
+            }
+        }
+        if (encontrada )
+            primervocal = vocales[pos];
         //Tomar la primer letra del apellido materno;
 
         //Tomar la primer letra del primer nombre
@@ -36,4 +61,5 @@ public class MainActivity extends AppCompatActivity {
         //Concatenar los anteriror y mostrar el rfc
 
     }
+
 }
