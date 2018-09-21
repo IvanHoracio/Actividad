@@ -10,136 +10,180 @@
     <TextView
         android:id="@+id/Nombre"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
         android:text="Nombre"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Ape_pa"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
-        android:text="Apellido paterno"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:text="Apellido Pa"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="145dp" />
+        app:layout_constraintEnd_toStartOf="@+id/Apellido_pa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 
     <TextView
         android:id="@+id/AP_ma"
         android:layout_width="140dp"
         android:layout_height="37dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
         android:text="Apellido Materno"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="190dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ape_pa" />
 
     <TextView
         android:id="@+id/Fe_nac"
         android:layout_width="185dp"
         android:layout_height="23dp"
-        android:text="Fecha de nacimiento"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="Dia Nacimi"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AP_ma" />
 
     <TextView
         android:id="@+id/Homo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="65dp"
         android:text="Homonimia"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="292dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fe_nac" />
 
     <TextView
         android:id="@+id/Rfc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="50dp"
         android:text="RFC"
         android:textAllCaps="false"
         android:textColor="?attr/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Homo" />
 
     <EditText
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="Nombre"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Apellido_pa"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="Ap_paterno"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="136dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <EditText
         android:id="@+id/Ap_ma"
         android:layout_width="196dp"
         android:layout_height="41dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="Ap_materno"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="186dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Apellido_pa" />
 
     <EditText
         android:id="@+id/Fe_Nac"
         android:layout_width="183dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="F_nacimientos"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="237dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ap_ma" />
+
 
     <EditText
-        android:id="@+id/Homo_text"
+        android:id="@+id/Homonimia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Homonimia"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="277dp" />
-
-    <EditText
-        android:id="@+id/RFCtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="rfc"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="?attr/colorControlActivated"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="323dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fe_Nac" />
 
     <Button
         android:id="@+id/Generar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="50dp"
         android:onClick="generarRFC"
         android:text="Generar RFC"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rfc"
+        tools:layout_editor_absoluteX="53dp" />
 
     <Button
         android:id="@+id/Limpiar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="50dp"
         android:text="Limpiar campos"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rfc"
+        tools:layout_editor_absoluteX="203dp" />
+
+    <EditText
+        android:id="@+id/rfc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="414dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </android.support.constraint.ConstraintLayout>

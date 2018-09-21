@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void GenerarRFC(View v){
+    public void Generar(View v){
         //Tomar la primer letra
         EditText Apellido_paterno = (EditText) findViewById(R.id.Apellido_pa);
         String apPaterno = AdecuarCadena(Apellido_paterno.getText().toString());
@@ -43,9 +43,10 @@ public class MainActivity extends AppCompatActivity {
             if(apPaterno.indexOf(vocales[pos])>=0){
                 break;
             }
-        }
-        if (encontrada )
+        }if (encontrada ) {
+            char primervocal;
             primervocal = vocales[pos];
+        }
         //Tomar la primer letra del apellido materno;
 
         //Tomar la primer letra del primer nombre
@@ -57,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         //TOmar los 2 digitos del dia de nacimiento
 
         //Generar 3 caracteres (lestras mayúsculas o números) aleatoriamente
-
+        String [] abecedario = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+                "K", "L", "M","N","O","P","Q","R","S","T","U","V","W", "X","Y","Z" , "0", "2", "3", "4", "5", "6", "7", "8", "9"};
+        int x= (int) (Math.random()*150) +1;
         //Concatenar los anteriror y mostrar el rfc
 
     }
